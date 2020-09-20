@@ -1,82 +1,87 @@
-{
-  "Catesbys": {
+[
+  {
     "link": "https://spiritbunker.com",
     "type": "Professional",
     "title": "Catesbys Wine & Spirits - User Inventory App",
     "description": "Full-stack mobile application built for Catesbys Wines and Spirits that will track and collate a user’s collection of fine wines and spirits.",
     "tech": {
-      "back-end": ["NodeJS", "Express", "MySQL"],
-      "front-end": ["ReactJS", "Redux", "SCSS"]
+      "backEnd": ["NodeJS", "Express", "MySQL"],
+      "frontEnd": ["ReactJS", "Redux", "SCSS"]
     },
     "github": {
-      "back-end": "Please request access",
-      "front-end": "https://github.com/tomish0/catesby-fork-front"
+      "backEnd": "Please request access",
+      "frontEnd": "https://github.com/tomish0/catesby-fork-front"
     },
     "note": "Please utilise the browser 'Inspect' functionality to view the application in a mobile view",
-    "assets": null
+    "assets": null,
+    "backgroundColor": "#b9b4c1"
   },
-  "RBuddie": {
+  {
     "link": "www.getrbuddie.com",
     "type": "Professional",
     "title": "RBuddie LTD - Receipt Storage App",
     "description": "Fully client-side application to store your receipts digitally, removing the need for paper receipts in society.",
     "tech": {
-      "back-end": null,
-      "front-end": ["ReactJS", "CSS"]
+      "backEnd": [],
+      "frontEnd": ["ReactJS", "CSS"]
     },
     "github": {
-      "back-end": null,
-      "front-end": "github.com/tomish0/realRBuddie"
+      "backEnd": null,
+      "frontEnd": "github.com/tomish0/realRBuddie"
     },
     "note": "Please download the associated PDF of example receipt QR codes to scan through the application.",
-    "assets": []
+    "assets": [],
+    "backgroundColor": "rgb(89, 151, 52)"
   },
-  "Personal-Dashboard": {
+  {
     "link": "https://isengardcoding.com",
     "type": "Personal",
     "title": "Personal Dashboard - Coding Exercise",
     "description": "A coding challenge that utilises multiple different data assets.",
     "tech": {
-      "back-end": ["NodeJS", "Express", "MongoDB"],
-      "front-end": ["ReactJS", "Redux", "SCSS"]
+      "backEnd": ["NodeJS", "Express", "MongoDB"],
+      "frontEnd": ["ReactJS", "Redux", "SCSS"]
     },
     "github": {
-      "back-end": "Please request access",
-      "front-end": "https://github.com/tomish0/Personal-Dashboard-front"
+      "backEnd": "Please request access",
+      "frontEnd": "https://github.com/tomish0/Personal-Dashboard-front"
     },
     "note": "Manipulated the associated data sources to complete a coding challenge within the specified time period.",
-    "assets": []
+    "assets": [],
+    "backgroundColor": "rgb(24, 60, 89)"
   },
-  "Cheese-Ecommerce": {
+  {
     "link": "https://cheese-ecommerce.netlify.app",
     "type": "Personal",
     "title": "Cheese Shop Ecommerce",
     "description": "Vanilla Javascript project where you can add cheeses to your basket, change the quantities of each cheese in your basket and see your price total go up and down correspondingly.",
     "tech": {
-      "back-end": null,
-      "front-end": ["Javascript", "HTML", "CSS"]
+      "backEnd": [],
+      "frontEnd": ["Javascript", "HTML", "CSS"]
     },
     "github": {
-      "back-end": null,
-      "front-end": "https://github.com/tomish0/cheese_ecommerce"
+      "backEnd": null,
+      "frontEnd": "https://github.com/tomish0/cheese_ecommerce"
     },
     "note": "Unfortunately I can't actually sell you any cheese.",
-    "assets": null
+    "assets": null,
+    "backgroundColor": "rgb(36, 53, 60)"
   },
-  "Random-Movie-Picker": {
+  {
     "link": "https://random-movie-picker.netlify.app",
     "type": "Personal",
     "title": "Random Movie Picker",
     "description": "Receive a list of movies from an API, with which you can find a random movie from either all the movies or your favourites list.",
     "tech": {
-      "back-end": null,
-      "front-end": ["ReactJS", "CSS"]
+      "backEnd": [],
+      "frontEnd": ["ReactJS", "CSS"]
     },
     "github": {
-      "back-end": null,
-      "front-end": "https://github.com/tomish0/Random-Movie-Picker"
+      "backEnd": null,
+      "frontEnd": "https://github.com/tomish0/Random-Movie-Picker"
     },
     "note": "API very occassionally doesn't work.",
-    "assets": null
+    "assets": null,
+    "backgroundColor": "rgb(108, 166, 123)"
   }
-}
+]

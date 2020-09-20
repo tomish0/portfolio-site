@@ -5,7 +5,8 @@ function ProjectWindow(props) {
   return (
     <div>
       Project Window
-      <div>{project.image}</div>
+      {/* <div>{project.image}</div> */}
+      <div>{project.link}</div>
     </div>
   );
 }
