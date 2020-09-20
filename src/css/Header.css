@@ -1,4 +1,7 @@
 header {
+  position: absolute;
+  top: 0;
+  z-index: 200;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
