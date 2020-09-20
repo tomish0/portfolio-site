@@ -1,6 +1,9 @@
 header {
+    position: absolute;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    z-index: 200;
 }

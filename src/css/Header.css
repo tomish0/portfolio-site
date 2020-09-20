@@ -1,4 +1,6 @@
 header {
+  position: absolute;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,5 +11,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px;
+  z-index: 200;
 }
 /*# sourceMappingURL=Header.css.map */

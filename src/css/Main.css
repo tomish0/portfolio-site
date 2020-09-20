@@ -1,4 +1,47 @@
-.slider {
+.carousel-provider .slider {
+  height: 100vh;
+}
+
+.carousel-provider .dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  height: 110px;
+}
+
+.carousel-provider .dots button {
   position: relative;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  background-color: #f5f1ed;
+  border: none;
+}
+
+.carousel-provider .dots .carousel__dot--selected {
+  height: 12px;
+  width: 12px;
+}
+
+.carousel-provider .dots .carousel__dot--selected span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1.5px inset #f5f1ed;
+  border-radius: 50%;
+  height: 19px;
+  width: 19px;
 }
 /*# sourceMappingURL=Main.css.map */
