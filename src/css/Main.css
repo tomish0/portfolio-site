@@ -8,7 +8,6 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  overflow: hidden;
 }
 
 .carousel .slider {
@@ -26,6 +25,15 @@
 }
 
 .carousel .slider .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
   min-height: 100vh;
   -webkit-transition: 1.5s;
@@ -33,7 +41,7 @@
 }
 
 .carousel .dots {
-  position: absolute;
+  position: fixed;
   top: 50%;
   right: 5%;
   display: -webkit-box;
@@ -60,7 +68,7 @@
   height: 13px;
 }
 
-.carousel .dots .dot span {
+.carousel .dots .dot .active-dot {
   position: absolute;
   top: 50%;
   left: 50%;

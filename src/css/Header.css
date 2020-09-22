@@ -12,5 +12,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px;
+  width: 100%;
 }
 /*# sourceMappingURL=Header.css.map */
