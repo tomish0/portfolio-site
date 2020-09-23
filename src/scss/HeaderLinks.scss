@@ -1,8 +1,16 @@
 .header-links-container {
-  border-left: 1px solid black;
+  border-left: 1px solid #f5f1ed;
   display: flex;
   flex-direction: column;
-  h3 {
+  padding: 10px;
+  font-size: 1.3em;
+  font-weight: 400;
+ a {
+   text-decoration: none;
+   color: #f5f1ed;
+ }
+  p {
     margin: 0;
+
   }
 }
