@@ -1,20 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
+import "../../css/Dots.css";
 
 function Dots(props) {
-  const [activeDot, setActiveDot] = useState();
-
-  useEffect(() => {
-    
-  }, [])
-
   const slide = (index) => {
-    var newPosition = index * props.pageHeight;
-    console.log(index, newPosition);
-    window.scrollTo({
-      top: newPosition,
-      left: 0,
-      behavior: "smooth",
-    });
+    props.setCurrentSlide(index);
+    document
+      .getElementById(`slide${index}`)
+      .scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -22,7 +14,9 @@ function Dots(props) {
       {props.projects.map((project, index) => {
         return (
           <div className="dot" key={index} onClick={() => slide(index)}>
-            <span className={activeDot ? "active-dot" : ""}></span>
+            <span
+              className={props.currentSlide === index ? "active-dot" : ""}
+            ></span>
           </div>
         );
       })}

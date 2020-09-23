@@ -8,6 +8,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  overflow: hidden;
 }
 
 .carousel .slider {
@@ -25,6 +26,7 @@
 }
 
 .carousel .slider .slide {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,45 +40,25 @@
   min-height: 100vh;
   -webkit-transition: 1.5s;
   transition: 1.5s;
+  padding-top: 10rem;
 }
 
-.carousel .dots {
-  position: fixed;
-  top: 50%;
-  right: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 130px;
-}
-
-.carousel .dots .dot {
-  position: relative;
-  border-radius: 50%;
-  background-color: #f5f1ed;
-  width: 13px;
-  height: 13px;
-}
-
-.carousel .dots .dot .active-dot {
+.carousel .slider .slide .next-btn,
+.carousel .slider .slide .prev-btn {
   position: absolute;
-  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border-radius: 50%;
-  border: 2px inset #f5f1ed;
-  width: 20px;
-  height: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 300;
+}
+
+.carousel .slider .slide .next-btn {
+  bottom: 0.4rem;
+}
+
+.carousel .slider .slide .prev-btn {
+  top: 12rem;
 }
 /*# sourceMappingURL=Main.css.map */

@@ -1,5 +1,5 @@
 .header-links-container {
-  border-left: 1px solid black;
+  border-left: 1px solid #f5f1ed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7,9 +7,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 10px;
+  font-size: 1.3em;
+  font-weight: 400;
 }
 
-.header-links-container h3 {
+.header-links-container a {
+  text-decoration: none;
+  color: #f5f1ed;
+}
+
+.header-links-container p {
   margin: 0;
 }
 /*# sourceMappingURL=HeaderLinks.css.map */
