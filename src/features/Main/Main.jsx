@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Color from "color";
 import Project from "./Project/Project";
 import Dots from "./Dots";
 import projects from "../../projects/projects.json";
@@ -109,13 +110,16 @@ function Main() {
     <div className="carousel">
       <div className="slider">
         {projects.map((project, index) => {
+          var color = Color(project.backgroundColor);
+          var darkerColor = color.darken(0.5)
+
           return (
             <div
               className="slide"
               key={index}
               id={`slide${index}`}
               style={{
-                backgroundColor: `${project.backgroundColor}`,
+                backgroundImage: `linear-gradient(to top left, ${color} 30%, ${darkerColor})`,
               }}
             >
               {currentSlide !== 0 ? (

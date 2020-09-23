@@ -14,10 +14,11 @@
     },
     "note": "Please utilise the browser 'Inspect' functionality to view the application in a mobile view",
     "assets": null,
-    "backgroundColor": "#b9b4c1"
+    "backgroundColor": "#a5b6c2",
+    "image": "https://i.imgur.com/EBzI7py.png"
   },
   {
-    "link": "www.getrbuddie.com",
+    "link": "https://getrbuddie.com",
     "type": "Professional",
     "title": "RBuddie LTD - Receipt Storage App",
     "description": "Fully client-side application to store your receipts digitally, removing the need for paper receipts in society.",

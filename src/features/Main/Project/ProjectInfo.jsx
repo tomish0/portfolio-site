@@ -4,21 +4,35 @@ function ProjectInfo(props) {
   const { project } = props;
 
   return (
-    <div>
-      ProjectInfo
-      <div>{project.type}</div>
-      <div>{project.link}</div>
-      <div>{project.title}</div>
-      <div>{project.description}</div>
-      <div>{project.tech.backEnd.map((item, index) => {
-          return (<div key={index}>{item}</div>)
-      })}</div>
-      <div>{project.tech.frontEnd.map((item, index) => {
-          return (<div key={index}>{item}</div>)
-      })}</div>
-      <div>{project.github.backEnd}</div>
-      <div>{project.github.frontEnd}</div>
-      <div>{project.note}</div>
+    <div className="project-info-container">
+      <p className="project-type">{project.type}</p>
+      <a href={project.link} target="_blank" className="project-title">
+        <div>{project.title}</div>
+      </a>
+      <div className="project-description">{project.description}</div>
+      <table className="project-tech-table">
+      <tbody>
+        <tr>
+          {project.tech.backEnd.length > 0 ? <th>Front </th> : null}
+          {project.tech.frontEnd.map((item, index) => (
+            <td key={index} className="project-tech-item">
+              {item}
+            </td>
+          ))}
+        </tr>
+        {project.tech.backEnd.length > 0 ? (
+          <tr>
+            <th>Back </th>
+            {project.tech.backEnd.map((item, index) => (
+              <td key={index} className="project-tech-item">
+                {item}
+              </td>
+            ))}
+          </tr>
+        ) : null}
+        </tbody>
+      </table>
+      <div>NOTE: {project.note}</div>
     </div>
   );
 }

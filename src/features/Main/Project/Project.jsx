@@ -1,14 +1,15 @@
-import React from 'react';
-import ProjectInfo from "./ProjectInfo"
-import ProjectWindow from "./ProjectWindow"
+import React from "react";
+import ProjectInfo from "./ProjectInfo";
+import ProjectWindow from "./ProjectWindow";
+import "../../../css/Project.css"
 
 function Project(props) {
-    return (
-        <div>
-            <ProjectInfo project={props.project}/>
-            <ProjectWindow project={props.project}/>
-        </div>
-    );
+  return (
+    <div className='project-container'>
+      <ProjectInfo project={props.project} />
+      <ProjectWindow project={props.project} />
+    </div>
+  );
 }
 
 export default Project;

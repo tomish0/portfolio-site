@@ -2,12 +2,11 @@ import React from "react";
 
 function ProjectWindow(props) {
   const { project } = props;
+
   return (
-    <div>
-      Project Window
-      {/* <div>{project.image}</div> */}
-      <div>{project.link}</div>
-    </div>
+    <a href={project.link} target="_blank" className="window-link">
+      <img src={`${project.image}`} />
+    </a>
   );
 }
 
