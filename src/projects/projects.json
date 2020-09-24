@@ -21,7 +21,7 @@
     "link": "https://getrbuddie.com",
     "type": "Professional",
     "title": "RBuddie LTD - Receipt Storage App",
-    "description": "Fully client-side application to store your receipts digitally, removing the need for paper receipts in society.",
+    "description": "Client-side mobile application to store your receipts digitally, removing the need for paper receipts in society.",
     "tech": {
       "backEnd": [],
       "frontEnd": ["ReactJS", "CSS"]
@@ -32,7 +32,8 @@
     },
     "note": "Please download the associated PDF of example receipt QR codes to scan through the application.",
     "assets": [],
-    "backgroundColor": "rgb(89, 151, 52)"
+    "backgroundColor": "rgb(89, 151, 52)",
+    "image": "https://i.imgur.com/sh9VBjv.jpg"
   },
   {
     "link": "https://isengardcoding.com",
@@ -55,7 +56,7 @@
     "link": "https://cheese-ecommerce.netlify.app",
     "type": "Personal",
     "title": "Cheese Shop Ecommerce",
-    "description": "Vanilla Javascript project where you can add cheeses to your basket, change the quantities of each cheese in your basket and see your price total go up and down correspondingly.",
+    "description": "Vanilla Javascript project.",
     "tech": {
       "backEnd": [],
       "frontEnd": ["Javascript", "HTML", "CSS"]
@@ -66,13 +67,14 @@
     },
     "note": "Unfortunately I can't actually sell you any cheese.",
     "assets": null,
-    "backgroundColor": "rgb(36, 53, 60)"
+    "backgroundColor": "rgb(36, 53, 60)",
+    "image": "https://i.imgur.com/MRY3Z6I.png"
   },
   {
-    "link": "https://random-movie-picker.netlify.app",
+    "link": "https://5f6c9a2c482bba1e4b18a117--random-movie-picker.netlify.app/",
     "type": "Personal",
     "title": "Random Movie Picker",
-    "description": "Receive a list of movies from an API, with which you can find a random movie from either all the movies or your favourites list.",
+    "description": "Retrieve a selection of movies from an API, with which you can find a random movie from either all the movies or your favourites list.",
     "tech": {
       "backEnd": [],
       "frontEnd": ["ReactJS", "CSS"]
@@ -83,6 +85,7 @@
     },
     "note": "API very occassionally doesn't work.",
     "assets": null,
-    "backgroundColor": "rgb(108, 166, 123)"
+    "backgroundColor": "rgb(108, 166, 123)",
+    "image": "https://i.imgur.com/QFXo7kO.png"
   }
 ]
