@@ -32,6 +32,9 @@
   font-size: 2.1em;
   text-decoration: none;
   color: #f5f1ed;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .project-container .project-title div {

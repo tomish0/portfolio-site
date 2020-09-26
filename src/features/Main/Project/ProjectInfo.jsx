@@ -1,12 +1,17 @@
 import React from "react";
-import pdf from "../../../RBuddie-QR-pdf/RBuddie-Qr-Codes-26-09-20.pdf";
+import pdf from "../../../assets/RBuddie-Qr-Codes-26-09-20.pdf";
 
 function ProjectInfo(props) {
   const { project } = props;
   return (
     <div className="project-info-container">
       <p className="project-type">{project.type}</p>
-      <a href={project.link} target="_blank" className="project-title">
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-title"
+      >
         <div>{project.title}</div>
       </a>
       <div className="project-description">{project.description}</div>
@@ -35,7 +40,12 @@ function ProjectInfo(props) {
       {project.note ? <div>NOTE: {project.note}</div> : null}
       {project.title === "RBuddie LTD - Receipt Storage App" ? (
         <div className="pdf-download-container">
-          <a href={pdf} target="_blank" className="pdf-download">
+          <a
+            href={pdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pdf-download"
+          >
             PDF
           </a>
           <div>{project.assetNote}</div>

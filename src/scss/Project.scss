@@ -23,6 +23,7 @@
     font-size: 2.1em;
     text-decoration: none;
     color: $color-pearl;
+    width: max-content;
     div {
       margin: 15px 0 15px 0;
     }
@@ -40,16 +41,16 @@
       width: 25%;
     }
   }
-.pdf-download-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  .pdf-download-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 
-  .pdf-download {
-    color: $color-pearl;
-    margin-right: 4px;
+    .pdf-download {
+      color: $color-pearl;
+      margin-right: 4px;
+    }
   }
-}
 
   .window-link {
     height: 90%;

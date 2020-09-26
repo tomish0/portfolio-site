@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Color from "color";
 import Project from "./Project/Project";
 import Dots from "./Dots";
-import projects from "../../projects/projects.json";
+import projects from "../../assets/projects.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "../../css/Main.css";

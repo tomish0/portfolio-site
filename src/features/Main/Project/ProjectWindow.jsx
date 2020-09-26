@@ -4,7 +4,12 @@ function ProjectWindow(props) {
   const { project } = props;
 
   return (
-    <a href={project.link} target="_blank" className="window-link">
+    <a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="window-link"
+    >
       <img src={`${project.image}`} />
     </a>
   );
