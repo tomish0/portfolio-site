@@ -4,13 +4,18 @@
   position: relative;
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
   overflow: hidden;
   .slider {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
     .slide {
       position: relative;
       display: flex;
@@ -20,6 +25,7 @@
       min-height: 100vh;
       transition: 1.5s;
       padding-top: 10rem;
+      scroll-snap-align: center;
       .next-btn,
       .prev-btn {
         position: absolute;

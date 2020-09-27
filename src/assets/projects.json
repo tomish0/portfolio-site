@@ -37,23 +37,6 @@
     "image": "https://api.isengardcoding.com/images/rbuddie.jpeg"
   },
   {
-    "link": "https://isengardcoding.com",
-    "type": "Personal",
-    "title": "Personal Dashboard - Coding Exercise",
-    "description": "A coding challenge that utilises multiple different data assets.",
-    "tech": {
-      "backEnd": ["NodeJS", "Express", "MongoDB"],
-      "frontEnd": ["ReactJS", "Redux", "SCSS"]
-    },
-    "github": {
-      "backEnd": "Please request access",
-      "frontEnd": "https://github.com/tomish0/Personal-Dashboard-front"
-    },
-    "note": "Manipulated the associated data sources to complete a coding challenge within the specified time period.",
-    "asset": null,
-    "backgroundColor": "rgb(24, 60, 89)"
-  },
-  {
     "link": "https://cheese-ecommerce.netlify.app",
     "type": "Personal",
     "title": "Cheese Shop Ecommerce",
@@ -88,5 +71,22 @@
     "asset": null,
     "backgroundColor": "rgb(108, 166, 123)",
     "image": "https://api.isengardcoding.com/images/movie.png"
+  },
+  {
+    "link": "https://isengardcoding.com",
+    "type": "Personal",
+    "title": "Personal Dashboard - Coding Exercise",
+    "description": "A coding challenge that utilises multiple different data assets.",
+    "tech": {
+      "backEnd": ["NodeJS", "Express", "MongoDB"],
+      "frontEnd": ["ReactJS", "Redux", "SCSS"]
+    },
+    "github": {
+      "backEnd": "Please request access",
+      "frontEnd": "https://github.com/tomish0/Personal-Dashboard-front"
+    },
+    "note": "Manipulated the associated data sources to complete a coding challenge within the specified time period.",
+    "asset": null,
+    "backgroundColor": "rgb(24, 60, 89)"
   }
 ]

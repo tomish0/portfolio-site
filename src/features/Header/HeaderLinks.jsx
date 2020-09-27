@@ -1,13 +1,13 @@
 import React from "react";
-import cv from "../../assets/Web_Development_CV.pdf";
+// import cv from "../../assets/Web_Development_CV.pdf";
 import "../../css/HeaderLinks.css";
 
 function HeaderLinks(props) {
   return (
     <div className="header-links-container">
-      <a href={cv} target="_blank" rel="noopener noreferrer">
+      {/* <a href={cv} target="_blank" rel="noopener noreferrer">
         CV
-      </a>
+      </a> */}
       <a
         href="https://www.linkedin.com/in/tom-isherwood-a472b6126/"
         target="_blank"
@@ -23,7 +23,7 @@ function HeaderLinks(props) {
         Github
       </a>
       <div>tom.isherwood0@gmail.com</div>
-      <div>+44 7766 311452</div>
+      {/* <div>+44 7766 311452</div> */}
     </div>
   );
 }
