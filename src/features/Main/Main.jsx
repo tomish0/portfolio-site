@@ -11,13 +11,10 @@ function Main() {
   const [slideDist, setSlideDist] = useState(0);
 
   useEffect(() => {
-    var elem = document.querySelector(`#slide4`);
-    var bounding = elem.getBoundingClientRect();
-
-    // console.log(bounding.top);
-    var slideDist = (bounding.top / 4) * -1;
-    setSlideDist(slideDist);
-    console.log(slideDist);
+    getSlideDist();
+    window.onresize = () => {
+      getSlideDist();
+    };
     window.scrollTo({
       top: 0,
       left: 0,
@@ -25,75 +22,26 @@ function Main() {
     });
   }, []);
 
-  const [scrolled, setScrolled] = useState(false);
+  const getSlideDist = () => {
+    var slideHeight = -document.body.scrollHeight;
+    setSlideDist(slideHeight);
+  };
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const handleEvent = (e) => {
-    // var isInViewport = (elem) => {
-    //   var bounding = elem.getBoundingClientRect();
-    //   var myElementHeight = elem.offsetHeight;
-    //   console.log(bounding.top);
-    //   return (
-    //     // distance.top >= 0 &&
-    //     // distance.left >= 0 &&
-    //     // distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    //     // distance.right <= (window.innerWidth || document.documentElement.clientWidth)
-    //     bounding.top >= 0 &&
-    //     bounding.left >= 0 &&
-    //     bounding.right <=
-    //       (window.innerWidth || document.documentElement.clientWidth) &&
-    //     bounding.bottom <=
-    //       (window.innerHeight || document.documentElement.clientHeight) +
-    //         myElementHeight
-    //   );
-    // };
-    // var slider = document.querySelector(".slider");
-    // var slides = slider.children;
-    // for (var i = 0; i < slides.length; i++) {
-    //   if (isInViewport(slides[i])) {
-    //     // console.log(i);
-    //     setCurrentSlide(i);
-    //   }
-    // }
+  const handleEvent = () => {
     var elem = document.querySelector(`#slide0`);
     var bounding = elem.getBoundingClientRect();
-    var boundingTop = bounding.top - 10;
-    
-    console.log(boundingTop, slideDist);
+    var boundingTop = bounding.top + slideDist / 2;
     if (boundingTop > slideDist) {
       setCurrentSlide(0);
     }
-    if (boundingTop <= slideDist && boundingTop > slideDist * 2) {
-      setCurrentSlide(1);
-    }
-    if (boundingTop <= slideDist * 2 && boundingTop > slideDist * 3) {
-      setCurrentSlide(2);
-    }
-    if (boundingTop <= slideDist * 3 && boundingTop > slideDist * 4) {
-      setCurrentSlide(3);
-    }
-    if (boundingTop <= slideDist * 4) {
-      setCurrentSlide(4);
-    }
-  };
-
-  const handleEvent3 = (e) => {
-    console.log(e.deltaY);
-    var dir = e.deltaY;
-    setScrolled(false);
-    if (!scrolled) {
-      var nextSlide;
-      if (dir < 0) {
-        nextSlide = currentSlide + 1;
-      } else {
-        nextSlide = currentSlide - 1;
+    var slider = document.querySelector(".slider");
+    var slides = slider.children.length;
+    for (var i = 1; i < slides; i++) {
+      if (boundingTop <= slideDist * i && boundingTop > slideDist * (i + 1)) {
+        setCurrentSlide(i);
       }
-      setCurrentSlide(nextSlide);
-      document
-        .getElementById(`slide${nextSlide}`)
-        .scrollIntoView({ behavior: "smooth" });
-      setScrolled(true);
     }
   };
 
@@ -103,7 +51,6 @@ function Main() {
         {projects.map((project, index) => {
           var color = Color(project.backgroundColor);
           var darkerColor = color.darken(0.5);
-
           return (
             <div
               onWheel={handleEvent}

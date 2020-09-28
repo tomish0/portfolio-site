@@ -1,6 +1,6 @@
 import React from "react";
 
-function HeaderTitle(props) {
+function HeaderTitle() {
   return (
     <div>
       <h1>Tom Isherwood</h1>

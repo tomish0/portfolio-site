@@ -2,7 +2,7 @@ import React from "react";
 // import cv from "../../assets/Web_Development_CV.pdf";
 import "../../css/HeaderLinks.css";
 
-function HeaderLinks(props) {
+function HeaderLinks() {
   return (
     <div className="header-links-container">
       {/* <a href={cv} target="_blank" rel="noopener noreferrer">
@@ -22,7 +22,8 @@ function HeaderLinks(props) {
       >
         Github
       </a>
-      <div>tom.isherwood0@gmail.com</div>
+      {/* <div>tom.isherwood0@gmail.com</div> */}
+      <a href="mailto:tom.isherwood0@gmail.com">tom.isherwood0@gmail.com</a>
       {/* <div>+44 7766 311452</div> */}
     </div>
   );

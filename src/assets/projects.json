@@ -13,9 +13,8 @@
       "frontEnd": "https://github.com/tomish0/catesby-fork-front"
     },
     "note": "Please look at the application on your mobile device at spiritbunker.com or utilise the browser 'Inspect' mobile view functionality.",
-    "asset": null,
     "backgroundColor": "#a5b6c2",
-    "image": "https://api.isengardcoding.com/images/catesbys.png"
+    "image": "https://api.tomish.com/images/catesbys.png"
   },
   {
     "link": "https://getrbuddie.com",
@@ -31,10 +30,8 @@
       "frontEnd": "github.com/tomish0/realRBuddie"
     },
     "note": "Please look at the application on your mobile device at getrbuddie.com or utilise the browser 'Inspect' mobile view functionality.",
-    "asset": "https://api.isengardcoding.com/Rbuddie-Qr-Codes-26-09-20.pdf",
-    "assetNote": "- Dummy receipt QR codes to scan through the application.",
     "backgroundColor": "rgb(89, 151, 52)",
-    "image": "https://api.isengardcoding.com/images/rbuddie.jpeg"
+    "image": "https://api.tomish.com/images/rbuddie.jpeg"
   },
   {
     "link": "https://cheese-ecommerce.netlify.app",
@@ -50,9 +47,8 @@
       "frontEnd": "https://github.com/tomish0/cheese_ecommerce"
     },
     "note": "Unfortunately I can't actually sell you any cheese.",
-    "asset": null,
     "backgroundColor": "rgb(36, 53, 60)",
-    "image": "https://api.isengardcoding.com/images/cheese.png"
+    "image": "https://api.tomish.com/images/cheese.png"
   },
   {
     "link": "https://5f6c9a2c482bba1e4b18a117--random-movie-picker.netlify.app/",
@@ -68,25 +64,7 @@
       "frontEnd": "https://github.com/tomish0/Random-Movie-Picker"
     },
     "note": null,
-    "asset": null,
     "backgroundColor": "rgb(108, 166, 123)",
-    "image": "https://api.isengardcoding.com/images/movie.png"
-  },
-  {
-    "link": "https://isengardcoding.com",
-    "type": "Personal",
-    "title": "Personal Dashboard - Coding Exercise",
-    "description": "A coding challenge that utilises multiple different data assets.",
-    "tech": {
-      "backEnd": ["NodeJS", "Express", "MongoDB"],
-      "frontEnd": ["ReactJS", "Redux", "SCSS"]
-    },
-    "github": {
-      "backEnd": "Please request access",
-      "frontEnd": "https://github.com/tomish0/Personal-Dashboard-front"
-    },
-    "note": "Manipulated the associated data sources to complete a coding challenge within the specified time period.",
-    "asset": null,
-    "backgroundColor": "rgb(24, 60, 89)"
+    "image": "https://api.tomish.com/images/movie.png"
   }
 ]

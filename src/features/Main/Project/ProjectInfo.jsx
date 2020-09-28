@@ -48,7 +48,7 @@ function ProjectInfo(props) {
           >
             PDF
           </a>
-          <div>{project.assetNote}</div>
+          <div>- Dummy receipt QR codes to scan through the application.</div>
         </div>
       ) : null}
     </div>

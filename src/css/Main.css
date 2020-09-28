@@ -49,7 +49,7 @@
   min-height: 100vh;
   -webkit-transition: 1.5s;
   transition: 1.5s;
-  padding-top: 10rem;
+  padding-top: 9rem;
   scroll-snap-align: center;
 }
 

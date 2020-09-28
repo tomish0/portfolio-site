@@ -3,7 +3,7 @@ import HeaderTitle from "./HeaderTitle";
 import HeaderLinks from "./HeaderLinks";
 import "../../css/Header.css";
 
-function Header(props) {
+function Header() {
   return (
     <header>
       <HeaderTitle />

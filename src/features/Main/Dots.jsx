@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../../css/Dots.css";
 
 function Dots(props) {
-  console.log(props.currentSlide);
   const slide = (index) => {
-    props.setCurrentSlide(index);
+    props.setCurrentSlide(index)
     document
       .getElementById(`slide${index}`)
       .scrollIntoView({ behavior: "smooth" });
@@ -14,10 +13,12 @@ function Dots(props) {
     <div className="dots">
       {props.projects.map((project, index) => {
         return (
-          <div className="dot" key={index} onClick={() => slide(index)}>
-            <span
-              className={props.currentSlide === index ? "active-dot" : ""}
-            ></span>
+          <div
+            key={index}
+            onClick={() => slide(index)}
+            className={props.currentSlide === index ? "dot active-dot" : "dot"}
+          >
+            <span></span>
           </div>
         );
       })}

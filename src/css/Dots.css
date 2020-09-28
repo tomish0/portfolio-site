@@ -20,11 +20,13 @@
 
 .dots .dot {
   position: relative;
-  border-radius: 50%;
-  background-color: #f5f1ed;
-  width: 13px;
-  height: 13px;
   cursor: pointer;
+  width: 18px;
+  height: 18px;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  -webkit-transition: border-color 0.20s linear;
+  transition: border-color 0.20s linear;
 }
 
 .dots .dot span {
@@ -33,13 +35,14 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  background: #f5f1ed;
+  border-radius: 10px;
+  width: 10px;
+  height: 10px;
 }
 
-.dots .dot .active-dot,
-.dots .dot span:hover {
-  border: 1px solid #f5f1ed;
+.dots .active-dot,
+.dots .dot:hover {
+  border-color: #f5f1ed;
 }
 /*# sourceMappingURL=Dots.css.map */
