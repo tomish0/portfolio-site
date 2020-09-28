@@ -3,12 +3,13 @@ import Color from "color";
 import Project from "./Project/Project";
 import Dots from "./Dots";
 import projects from "../../assets/projects.json";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "../../css/Main.css";
 
-function Main() {
-  const [slideDist, setSlideDist] = useState(0);
+function Main(props) {
+  const [slideDist, setSlideDist] = useState({
+    slideHeight: 0,
+    slideWidth: 0,
+  });
 
   useEffect(() => {
     getSlideDist();
@@ -24,7 +25,8 @@ function Main() {
 
   const getSlideDist = () => {
     var slideHeight = -document.body.scrollHeight;
-    setSlideDist(slideHeight);
+    var slideWidth = -document.body.scrollWidth;
+    setSlideDist({ slideHeight, slideWidth });
   };
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -32,15 +34,26 @@ function Main() {
   const handleEvent = () => {
     var elem = document.querySelector(`#slide0`);
     var bounding = elem.getBoundingClientRect();
-    var boundingTop = bounding.top + slideDist / 2;
-    if (boundingTop > slideDist) {
+    var boundingTop = bounding.top + slideDist.slideHeight / 2;
+    var boundingLeft = bounding.left + slideDist.slideWidth / 2;
+    if (
+      boundingTop > slideDist.slideHeight ||
+      boundingLeft > slideDist.slideHeight
+    ) {
       setCurrentSlide(0);
+      props.setColor(props.colors[0]);
     }
     var slider = document.querySelector(".slider");
     var slides = slider.children.length;
     for (var i = 1; i < slides; i++) {
-      if (boundingTop <= slideDist * i && boundingTop > slideDist * (i + 1)) {
+      if (
+        (boundingTop <= slideDist.slideHeight * i &&
+          boundingTop > slideDist.slideHeight * (i + 1)) ||
+        (boundingLeft <= slideDist.slideWidth * i &&
+          boundingLeft > slideDist.slideWidth * (i + 1))
+      ) {
         setCurrentSlide(i);
+        props.setColor(props.colors[i]);
       }
     }
   };
@@ -50,7 +63,7 @@ function Main() {
       <div className="slider">
         {projects.map((project, index) => {
           var color = Color(project.backgroundColor);
-          var darkerColor = color.darken(0.5);
+          var darkerColor = color.darken(0.7);
           return (
             <div
               onWheel={handleEvent}
@@ -58,10 +71,10 @@ function Main() {
               key={index}
               id={`slide${index}`}
               style={{
-                backgroundImage: `linear-gradient(to top left, ${color} 30%, ${darkerColor})`,
+                backgroundImage: `linear-gradient(to top left, ${color} 20%, ${darkerColor})`,
               }}
             >
-              <Project project={project} />
+              <Project project={project} color={props.color} />
             </div>
           );
         })}
@@ -70,6 +83,9 @@ function Main() {
         projects={projects}
         currentSlide={currentSlide}
         setCurrentSlide={setCurrentSlide}
+        colors={props.colors}
+        setColor={props.setColor}
+        color={props.color}
       />
     </div>
   );

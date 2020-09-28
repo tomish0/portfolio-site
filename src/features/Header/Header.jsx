@@ -3,11 +3,11 @@ import HeaderTitle from "./HeaderTitle";
 import HeaderLinks from "./HeaderLinks";
 import "../../css/Header.css";
 
-function Header() {
+function Header(props) {
   return (
     <header>
       <HeaderTitle />
-      <HeaderLinks />
+      <HeaderLinks color={props.color}/>
     </header>
   );
 }

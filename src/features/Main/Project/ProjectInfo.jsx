@@ -4,7 +4,9 @@ import pdf from "../../../assets/RBuddie-Qr-Codes-26-09-20.pdf";
 function ProjectInfo(props) {
   const { project } = props;
   return (
-    <div className="project-info-container">
+    <div
+      className="project-info-container"
+    >
       <p className="project-type">{project.type}</p>
       <a
         href={project.link}

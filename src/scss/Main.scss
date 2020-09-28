@@ -2,45 +2,31 @@
   height: 100vh;
   width: 100vw;
   position: relative;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  overflow: hidden;
   .slider {
-    position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
     scroll-behavior: smooth;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    scroll-snap-points-y: repeat(100vh);
+
     .slide {
-      position: relative;
+      scroll-snap-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100vw;
+      min-width: 100vw;
       min-height: 100vh;
-      transition: 1.5s;
       padding-top: 9rem;
-      scroll-snap-align: center;
-      .next-btn,
-      .prev-btn {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 30px;
-        cursor: pointer;
-        z-index: 300;
-      }
-      .next-btn {
-        bottom: 0.4rem;
-      }
-      .prev-btn {
-        top: 12rem;
-      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .carousel {
+    .slider {
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
     }
   }
 }

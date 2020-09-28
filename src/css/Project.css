@@ -78,8 +78,10 @@
 
 .project-container .window-link {
   height: 90%;
-  -webkit-box-shadow: 0px 0px 10px 0px #c9c5c1;
-          box-shadow: 0px 0px 10px 0px #c9c5c1;
+  -webkit-transition: -webkit-box-shadow 0.35s linear;
+  transition: -webkit-box-shadow 0.35s linear;
+  transition: box-shadow 0.35s linear;
+  transition: box-shadow 0.35s linear, -webkit-box-shadow 0.35s linear;
 }
 
 .project-container .window-link img {

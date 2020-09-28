@@ -17,6 +17,11 @@ header {
   border-bottom: 1px solid #f5f1ed;
 }
 
+header a {
+  -webkit-transition: color 0.35s linear;
+  transition: color 0.35s linear;
+}
+
 header h1 {
   margin: 0 0 15px 0;
 }

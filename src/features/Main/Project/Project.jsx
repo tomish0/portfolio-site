@@ -7,7 +7,7 @@ function Project(props) {
   return (
     <div className='project-container'>
       <ProjectInfo project={props.project} />
-      <ProjectWindow project={props.project} />
+      <ProjectWindow project={props.project} color={props.color}/>
     </div>
   );
 }

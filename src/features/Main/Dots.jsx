@@ -1,12 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useState } from "react";
 import "../../css/Dots.css";
 
 function Dots(props) {
   const slide = (index) => {
-    props.setCurrentSlide(index)
+    props.setCurrentSlide(index);
     document
       .getElementById(`slide${index}`)
       .scrollIntoView({ behavior: "smooth" });
+    props.setColor(props.colors[index]);
+  };
+
+  const [hover, setHover] = useState("");
+
+  const hoverEffect = (index) => {
+    setHover(index);
+  };
+
+  const cancelHoverEffect = (index) => {
+    setHover("");
   };
 
   return (
@@ -16,9 +28,17 @@ function Dots(props) {
           <div
             key={index}
             onClick={() => slide(index)}
-            className={props.currentSlide === index ? "dot active-dot" : "dot"}
+            onMouseLeave={() => cancelHoverEffect(index)}
+            onMouseOver={() => hoverEffect(index)}
+            // className={props.currentSlide === index ? "dot active-dot" : "dot"}
+            className="dot"
+            style={
+              props.currentSlide === index || hover === index
+                ? { borderColor: `${props.color}` }
+                : null
+            }
           >
-            <span></span>
+            <span style={{ backgroundColor: `${props.color}` }}></span>
           </div>
         );
       })}
