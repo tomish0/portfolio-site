@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   padding: 5px 10px 5px 10px;
-  font-size: 1.8em;
+  font-size: 25px;
   font-weight: 400;
   > * {
     margin: 2px 0 2px 0;
@@ -19,12 +19,23 @@
 }
 
 @media (max-width: 430px) {
-  .header-links-container  {
+  .header-links-container {
     flex-direction: row;
     border-left: none;
     justify-content: space-between;
     width: 120px;
     padding: 0 0 0 0;
+  }
+}
 
+@keyframes popout {
+  from {
+    font-size: 25px;
+  }
+  80% {
+    font-size: 28px;
+  }
+  to {
+    font-size: 25px;
   }
 }

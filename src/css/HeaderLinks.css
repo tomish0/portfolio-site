@@ -8,7 +8,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 5px 10px 5px 10px;
-  font-size: 1.8em;
+  font-size: 25px;
   font-weight: 400;
 }
 
@@ -40,6 +40,30 @@
             justify-content: space-between;
     width: 120px;
     padding: 0 0 0 0;
+  }
+}
+
+@-webkit-keyframes popout {
+  from {
+    font-size: 25px;
+  }
+  80% {
+    font-size: 28px;
+  }
+  to {
+    font-size: 25px;
+  }
+}
+
+@keyframes popout {
+  from {
+    font-size: 25px;
+  }
+  80% {
+    font-size: 28px;
+  }
+  to {
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=HeaderLinks.css.map */

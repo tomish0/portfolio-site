@@ -17,7 +17,7 @@ function Dots(props) {
     setHover(index);
   };
 
-  const cancelHoverEffect = (index) => {
+  const cancelHoverEffect = () => {
     setHover("");
   };
 
@@ -28,9 +28,8 @@ function Dots(props) {
           <div
             key={index}
             onClick={() => slide(index)}
-            onMouseLeave={() => cancelHoverEffect(index)}
+            onMouseLeave={cancelHoverEffect}
             onMouseOver={() => hoverEffect(index)}
-            // className={props.currentSlide === index ? "dot active-dot" : "dot"}
             className="dot"
             style={
               props.currentSlide === index || hover === index

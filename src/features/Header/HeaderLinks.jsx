@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
@@ -6,13 +6,29 @@ import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import "../../css/HeaderLinks.css";
 
 function HeaderLinks(props) {
+  const [hover, setHover] = useState("");
+
+  const hoverEffect = (num) => {
+    setHover(num);
+  };
+
+  const cancelHoverEffect = () => {
+    setHover("");
+  };
+
   return (
     <div className="header-links-container">
       <a
         href="https://www.linkedin.com/in/tom-isherwood-a472b6126/"
         target="_blank"
         rel="noopener noreferrer"
-        style={{ color: `${props.color}` }}
+        onMouseLeave={cancelHoverEffect}
+        onMouseOver={() => hoverEffect(1)}
+        style={
+          hover === 1
+            ? { animation: "popout 0.3s ease", color: `${props.color}` }
+            : { color: `${props.color}` }
+        }
       >
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
@@ -20,14 +36,25 @@ function HeaderLinks(props) {
         href="https://github.com/tomish0"
         target="_blank"
         rel="noopener noreferrer"
-        style={{ color: `${props.color}` }}
+        onMouseLeave={cancelHoverEffect}
+        onMouseOver={() => hoverEffect(2)}
+        style={
+          hover === 2
+            ? { animation: "popout 0.3s ease", color: `${props.color}` }
+            : { color: `${props.color}` }
+        }
       >
         <FontAwesomeIcon icon={faGithubSquare} />
       </a>
       <a
         href="mailto:tom.isherwood0@gmail.com"
-        style={{ color: `${props.color}` }}
-      >
+        onMouseLeave={cancelHoverEffect}
+        onMouseOver={() => hoverEffect(3)}
+        style={
+          hover === 3
+            ? { animation: "popout 0.3s ease", color: `${props.color}` }
+            : { color: `${props.color}` }
+        }      >
         <FontAwesomeIcon icon={faEnvelopeSquare} />
       </a>
     </div>

@@ -6,7 +6,7 @@ import "../../../css/Project.css"
 function Project(props) {
   return (
     <div className='project-container'>
-      <ProjectInfo project={props.project} />
+      <ProjectInfo project={props.project} color={props.color}/>
       <ProjectWindow project={props.project} color={props.color}/>
     </div>
   );
