@@ -63,7 +63,7 @@ function Main(props) {
       <div className="slider">
         {projects.map((project, index) => {
           var color = Color(project.backgroundColor);
-          var darkerColor = color.darken(0.7);
+          var darkerColor = color.darken(0.5);
           return (
             <div
               onWheel={handleEvent}
@@ -71,7 +71,7 @@ function Main(props) {
               key={index}
               id={`slide${index}`}
               style={{
-                backgroundImage: `linear-gradient(to top left, ${color} 20%, ${darkerColor})`,
+                backgroundImage: `radial-gradient(${darkerColor}, ${color})`,
               }}
             >
               <Project project={project} color={props.color} />
