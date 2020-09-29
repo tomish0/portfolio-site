@@ -88,4 +88,29 @@
   height: 100%;
   border: 1px solid #f5f1ed;
 }
+
+@media (max-width: 780px) {
+  .project-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 0.8em;
+  }
+  .project-container .project-info-container {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 510px) {
+  .project-container {
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 430px) {
+  .project-container {
+    font-size: 0.7em;
+  }
+}
 /*# sourceMappingURL=Project.css.map */

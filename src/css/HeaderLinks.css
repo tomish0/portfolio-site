@@ -27,4 +27,19 @@
 .header-links-container p {
   margin: 0;
 }
+
+@media (max-width: 430px) {
+  .header-links-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-left: none;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 120px;
+    padding: 0 0 0 0;
+  }
+}
 /*# sourceMappingURL=HeaderLinks.css.map */

@@ -61,3 +61,25 @@
     }
   }
 }
+
+@media (max-width: 780px) {
+  .project-container {
+    flex-direction: column;
+    font-size: 0.8em;
+    .project-info-container {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .project-container {
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 430px) {
+  .project-container {
+    font-size: 0.7em;
+  }
+}

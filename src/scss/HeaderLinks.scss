@@ -17,3 +17,14 @@
     margin: 0;
   }
 }
+
+@media (max-width: 430px) {
+  .header-links-container  {
+    flex-direction: row;
+    border-left: none;
+    justify-content: space-between;
+    width: 120px;
+    padding: 0 0 0 0;
+
+  }
+}

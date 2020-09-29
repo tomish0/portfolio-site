@@ -29,4 +29,37 @@ header h1 {
 header h2 {
   margin: 15px 0 0 0;
 }
+
+@media (max-width: 780px) {
+  header {
+    height: 8.5rem;
+  }
+}
+
+@media (max-width: 510px) {
+  header {
+    padding: 0 1rem 0 1rem;
+    font-size: 13px;
+    height: 8rem;
+  }
+}
+
+@media (max-width: 430px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding: 1rem 0 0 0;
+    height: 7.5rem;
+    font-size: 12.5px;
+  }
+  header h1 {
+    margin: 0 0 10px 0;
+  }
+  header h2 {
+    margin: 10px 0 0 0;
+  }
+}
 /*# sourceMappingURL=Header.css.map */
