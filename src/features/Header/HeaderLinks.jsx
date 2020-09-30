@@ -24,11 +24,8 @@ function HeaderLinks(props) {
         rel="noopener noreferrer"
         onMouseLeave={cancelHoverEffect}
         onMouseOver={() => hoverEffect(1)}
-        style={
-          hover === 1
-            ? { animation: "popout 0.3s ease", color: `${props.color}` }
-            : { color: `${props.color}` }
-        }
+        style={{ color: `${props.color}` }}
+        className={hover === 1 ? "active" : null}
       >
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
@@ -38,11 +35,8 @@ function HeaderLinks(props) {
         rel="noopener noreferrer"
         onMouseLeave={cancelHoverEffect}
         onMouseOver={() => hoverEffect(2)}
-        style={
-          hover === 2
-            ? { animation: "popout 0.3s ease", color: `${props.color}` }
-            : { color: `${props.color}` }
-        }
+        style={{ color: `${props.color}` }}
+        className={hover === 2 ? "active" : null}
       >
         <FontAwesomeIcon icon={faGithubSquare} />
       </a>
@@ -50,11 +44,9 @@ function HeaderLinks(props) {
         href="mailto:tom.isherwood0@gmail.com"
         onMouseLeave={cancelHoverEffect}
         onMouseOver={() => hoverEffect(3)}
-        style={
-          hover === 3
-            ? { animation: "popout 0.3s ease", color: `${props.color}` }
-            : { color: `${props.color}` }
-        }      >
+        style={{ color: `${props.color}` }}
+        className={hover === 3 ? "active" : null}
+      >
         <FontAwesomeIcon icon={faEnvelopeSquare} />
       </a>
     </div>

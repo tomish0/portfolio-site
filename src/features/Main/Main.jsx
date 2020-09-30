@@ -21,6 +21,7 @@ function Main(props) {
       left: 0,
       behavior: "smooth",
     });
+    console.log('called');
   }, []);
 
   const getSlideDist = () => {
@@ -63,7 +64,7 @@ function Main(props) {
       <div className="slider">
         {projects.map((project, index) => {
           var color = Color(project.backgroundColor);
-          var darkerColor = color.darken(0.5);
+          var darkerColor = color.darken(0.4);
           return (
             <div
               onWheel={handleEvent}

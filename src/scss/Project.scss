@@ -21,17 +21,19 @@
   }
   .project-title {
     font-size: 2.1em;
-    text-decoration: none;
-    color: $color-pearl;
-    width: max-content;
-    div {
-      margin: 15px 0 15px 0;
+    position: relative;
+    max-width: max-content;
+    margin: 15px 0 15px 0;
+    .project-title-link {
+      text-decoration: none;
+      transition: color 0.35s linear;
+
     }
+ 
   }
 
   .project-tech-table {
     width: 60%;
-
     th {
       display: flex;
       justify-content: flex-start;
@@ -47,8 +49,13 @@
     justify-content: flex-start;
 
     .pdf-download {
+      position: relative;
       color: $color-pearl;
+      font-weight: 400;
       margin-right: 4px;
+      text-decoration: none;
+      font-size: 1.1em;
+
     }
   }
 
@@ -60,6 +67,19 @@
       border: 1px solid $color-pearl;
     }
   }
+}
+
+.link-underline {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  height: 2px;
+  width: 0%;
+  left: 0%;
+  transition: width linear 0.2s;
+}
+.active {
+  width: 100%;
 }
 
 @media (max-width: 780px) {

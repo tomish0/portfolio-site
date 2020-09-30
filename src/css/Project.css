@@ -30,15 +30,17 @@
 
 .project-container .project-title {
   font-size: 2.1em;
-  text-decoration: none;
-  color: #f5f1ed;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  position: relative;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 15px 0 15px 0;
 }
 
-.project-container .project-title div {
-  margin: 15px 0 15px 0;
+.project-container .project-title .project-title-link {
+  text-decoration: none;
+  -webkit-transition: color 0.35s linear;
+  transition: color 0.35s linear;
 }
 
 .project-container .project-tech-table {
@@ -72,8 +74,12 @@
 }
 
 .project-container .pdf-download-container .pdf-download {
+  position: relative;
   color: #f5f1ed;
+  font-weight: 400;
   margin-right: 4px;
+  text-decoration: none;
+  font-size: 1.1em;
 }
 
 .project-container .window-link {
@@ -87,6 +93,21 @@
 .project-container .window-link img {
   height: 100%;
   border: 1px solid #f5f1ed;
+}
+
+.link-underline {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  height: 2px;
+  width: 0%;
+  left: 0%;
+  -webkit-transition: width linear 0.2s;
+  transition: width linear 0.2s;
+}
+
+.active {
+  width: 100%;
 }
 
 @media (max-width: 780px) {
