@@ -8,8 +8,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
-  height: 75%;
+  width: 82%;
+  height: 90%;
   font-size: 0.9em;
 }
 
@@ -82,17 +82,22 @@
   font-size: 1.1em;
 }
 
-.project-container .window-link {
+.project-container .window-link-container {
   height: 90%;
   -webkit-transition: -webkit-box-shadow 0.35s linear;
   transition: -webkit-box-shadow 0.35s linear;
   transition: box-shadow 0.35s linear;
   transition: box-shadow 0.35s linear, -webkit-box-shadow 0.35s linear;
+  cursor: pointer;
 }
 
-.project-container .window-link img {
+.project-container .window-link-container img {
   height: 100%;
-  border: 1px solid #f5f1ed;
+}
+
+.project-container .window-link-container a {
+  height: 100%;
+  width: 100%;
 }
 
 .link-underline {
@@ -110,28 +115,95 @@
   width: 100%;
 }
 
+@media (max-width: 1010px) {
+  .project-container .window-link-container {
+    height: 85%;
+  }
+}
+
+@media (max-width: 977px) {
+  .project-container .window-link-container {
+    height: 80%;
+  }
+}
+
+@media (max-width: 934px) {
+  .project-container .window-link-container {
+    height: 75%;
+  }
+}
+
+@media (max-width: 887px) {
+  .project-container {
+    font-size: 0.8em;
+  }
+  .project-container .window-link-container {
+    height: 70%;
+  }
+}
+
+@media (max-width: 819px) {
+  .project-container .window-link-container {
+    height: 65%;
+  }
+}
+
 @media (max-width: 780px) {
+  .project-container {
+    width: 92%;
+  }
+}
+
+@media (max-width: 700px) {
+  .project-container .window-link-container {
+    height: 60%;
+  }
+}
+
+@media (max-width: 658px) {
+  .project-container .window-link-container {
+    height: 55%;
+  }
+}
+
+@media (max-width: 617px) {
+  .project-container {
+    font-size: 0.75em;
+  }
+  .project-container .window-link-container {
+    height: 50%;
+  }
+}
+
+@media (max-width: 567px) {
   .project-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    font-size: 0.8em;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: 85%;
+    margin-bottom: 20px;
   }
   .project-container .project-info-container {
     margin-right: 0;
   }
 }
 
-@media (max-width: 510px) {
+@media (max-width: 430px) {
   .project-container {
-    font-size: 0.75em;
+    font-size: 0.65em;
+  }
+  .project-container .window-link-container {
+    height: 43%;
   }
 }
 
-@media (max-width: 430px) {
-  .project-container {
-    font-size: 0.7em;
+@media (max-width: 385px) {
+  .project-container .window-link-container {
+    height: 40%;
   }
 }
 /*# sourceMappingURL=Project.css.map */

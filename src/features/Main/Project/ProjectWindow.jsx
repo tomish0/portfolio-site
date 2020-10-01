@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function ProjectWindow(props) {
-  const { project } = props;
+  const { project, color } = props;
 
   const [hover, setHover] = useState(false);
 
@@ -14,23 +14,24 @@ function ProjectWindow(props) {
   };
 
   return (
-    <a
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="window-link"
+    <div
+      className="window-link-container"
       onMouseLeave={cancelHoverEffect}
       onMouseOver={hoverEffect}
       style={
         hover
           ? {
-              boxShadow: `0px 0px 50px 0px ${props.color}`,
+              boxShadow: `0px 0px 60px 0px ${color}`,
             }
-          : { boxShadow: `0px 0px 30px 0px ${props.color}` }
+          : {
+              boxShadow: `0px 0px 30px 0px ${color}`,
+            }
       }
     >
-      <img src={`${project.image}`} alt="project-window" />
-    </a>
+      <a href={project.link} target="_blank" rel="noopener noreferrer">
+        <img src={`${project.image}`} alt="project-window" />
+      </a>
+    </div>
   );
 }
 

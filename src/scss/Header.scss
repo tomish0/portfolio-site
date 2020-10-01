@@ -28,14 +28,20 @@ header {
 
 @media (max-width: 780px) {
   header {
+    padding: 0 2.5rem 0 3.5rem;
     height: 8.5rem;
+  }
+}
+
+@media (max-width: 617px) {
+  header {
+    font-size: 13px;
   }
 }
 
 @media (max-width: 510px) {
   header {
     padding: 0 1rem 0 1rem;
-    font-size: 13px;
     height: 8rem;
   }
 }

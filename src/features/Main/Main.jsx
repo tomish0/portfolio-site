@@ -21,7 +21,6 @@ function Main(props) {
       left: 0,
       behavior: "smooth",
     });
-    console.log('called');
   }, []);
 
   const getSlideDist = () => {

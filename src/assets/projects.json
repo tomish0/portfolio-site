@@ -14,7 +14,7 @@
     },
     "note": "Please look at the application on your mobile device at spiritbunker.com or utilise the browser 'Inspect' mobile view functionality.",
     "backgroundColor": "#a5b6c2",
-    "image": "https://api.tomish.com/images/catesbys.png"
+    "image": "https://api.tomish.me/images/catesbys.png"
   },
   {
     "link": "https://getrbuddie.com",
@@ -31,13 +31,13 @@
     },
     "note": "Please look at the application on your mobile device at getrbuddie.com or utilise the browser 'Inspect' mobile view functionality.",
     "backgroundColor": "rgb(89, 151, 52)",
-    "image": "https://api.tomish.com/images/rbuddie.jpeg"
+    "image": "https://api.tomish.me/images/rbuddie.jpeg"
   },
   {
     "link": "https://cheese-ecommerce.netlify.app",
     "type": "Personal",
     "title": "Cheese Shop Ecommerce",
-    "description": "Fully responsive vanilla Javascript application.",
+    "description": "Responsive vanilla Javascript application.",
     "tech": {
       "backEnd": [],
       "frontEnd": ["Javascript", "HTML", "CSS"]
@@ -48,13 +48,13 @@
     },
     "note": "Unfortunately I can't actually sell you any cheese.",
     "backgroundColor": "rgb(36, 53, 60)",
-    "image": "https://api.tomish.com/images/cheese.png"
+    "image": "https://api.tomish.me/images/cheese.png"
   },
   {
     "link": "https://5f6c9a2c482bba1e4b18a117--random-movie-picker.netlify.app/",
     "type": "Personal",
     "title": "Random Movie Picker",
-    "description": "Fully responsive movie API application.",
+    "description": "Responsive movie API application.",
     "tech": {
       "backEnd": [],
       "frontEnd": ["ReactJS", "CSS"]
@@ -65,6 +65,6 @@
     },
     "note": null,
     "backgroundColor": "rgb(108, 166, 123)",
-    "image": "https://api.tomish.com/images/movie.png"
+    "image": "https://api.tomish.me/images/movie.png"
   }
 ]
