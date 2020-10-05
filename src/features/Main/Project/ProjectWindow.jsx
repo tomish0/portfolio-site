@@ -14,10 +14,13 @@ function ProjectWindow(props) {
   };
 
   return (
-    <div
+    <a
       className="window-link-container"
       onMouseLeave={cancelHoverEffect}
       onMouseOver={hoverEffect}
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
       style={
         hover
           ? {
@@ -28,10 +31,8 @@ function ProjectWindow(props) {
             }
       }
     >
-      <a href={project.link} target="_blank" rel="noopener noreferrer">
-        <img src={`${project.image}`} alt="project-window" />
-      </a>
-    </div>
+      <img src={`${project.image}`} alt="project-window" />
+    </a>
   );
 }
 

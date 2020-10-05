@@ -24,7 +24,7 @@ function HeaderLinks(props) {
         rel="noopener noreferrer"
         onMouseLeave={cancelHoverEffect}
         onMouseOver={() => hoverEffect(1)}
-        style={{ color: `${props.color}` }}
+        // style={{ color: `${props.color}` }}
         className={hover === 1 ? "active" : null}
       >
         <FontAwesomeIcon icon={faLinkedin} />
@@ -35,7 +35,7 @@ function HeaderLinks(props) {
         rel="noopener noreferrer"
         onMouseLeave={cancelHoverEffect}
         onMouseOver={() => hoverEffect(2)}
-        style={{ color: `${props.color}` }}
+        // style={{ color: `${props.color}` }}
         className={hover === 2 ? "active" : null}
       >
         <FontAwesomeIcon icon={faGithubSquare} />
@@ -44,7 +44,7 @@ function HeaderLinks(props) {
         href="mailto:tom.isherwood0@gmail.com"
         onMouseLeave={cancelHoverEffect}
         onMouseOver={() => hoverEffect(3)}
-        style={{ color: `${props.color}` }}
+        // style={{ color: `${props.color}` }}
         className={hover === 3 ? "active" : null}
       >
         <FontAwesomeIcon icon={faEnvelopeSquare} />

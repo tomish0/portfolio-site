@@ -5,7 +5,7 @@ import Dots from "./Dots";
 import projects from "../../assets/projects.json";
 import "../../css/Main.css";
 
-function Main(props) {
+function Main() {
   const [slideDist, setSlideDist] = useState({
     slideHeight: 0,
     slideWidth: 0,
@@ -13,6 +13,7 @@ function Main(props) {
 
   useEffect(() => {
     getSlideDist();
+    getColors();
     window.onresize = () => {
       getSlideDist();
     };
@@ -29,44 +30,63 @@ function Main(props) {
     setSlideDist({ slideHeight, slideWidth });
   };
 
+  const [colors, setColors] = useState([]);
+
+  const [color, setColor] = useState(undefined);
+
+  const getColors = () => {
+    projects.forEach((project) => {
+      var color = Color(project.backgroundColor);
+      var light = color.isLight();
+      var newColor;
+      if (light) {
+        newColor = color.rotate(50).darken(0.5);
+      } else {
+        newColor = color.rotate(-50).lighten(0.8);
+      }
+      setColors((colors) => [...colors, newColor]);
+    });
+  };
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const handleEvent = () => {
     var elem = document.querySelector(`#slide0`);
     var bounding = elem.getBoundingClientRect();
     var boundingTop = bounding.top + slideDist.slideHeight / 2;
-    var boundingLeft = bounding.left + slideDist.slideWidth / 2;
+    // var boundingLeft = bounding.left + slideDist.slideWidth / 2;
     if (
-      boundingTop > slideDist.slideHeight ||
-      boundingLeft > slideDist.slideHeight
+      boundingTop > slideDist.slideHeight 
+      // ||
+      // boundingLeft > slideDist.slideHeight
     ) {
       setCurrentSlide(0);
-      props.setColor(props.colors[0]);
+      setColor(colors[0]);
     }
     var slider = document.querySelector(".slider");
     var slides = slider.children.length;
     for (var i = 1; i < slides; i++) {
       if (
         (boundingTop <= slideDist.slideHeight * i &&
-          boundingTop > slideDist.slideHeight * (i + 1)) ||
-        (boundingLeft <= slideDist.slideWidth * i &&
-          boundingLeft > slideDist.slideWidth * (i + 1))
+          boundingTop > slideDist.slideHeight * (i + 1)) 
+        //   ||
+        // (boundingLeft <= slideDist.slideWidth * i &&
+        //   boundingLeft > slideDist.slideWidth * (i + 1))
       ) {
         setCurrentSlide(i);
-        props.setColor(props.colors[i]);
+        setColor(colors[i]);
       }
     }
   };
 
   return (
-    <div className="carousel">
+    <div className="carousel" onWheel={handleEvent} onTouchMove={handleEvent}>
       <div className="slider">
         {projects.map((project, index) => {
           var color = Color(project.backgroundColor);
           var darkerColor = color.darken(0.4);
           return (
             <div
-              onWheel={handleEvent}
               className="slide"
               key={index}
               id={`slide${index}`}
@@ -74,19 +94,19 @@ function Main(props) {
                 backgroundImage: `radial-gradient(${darkerColor}, ${color})`,
               }}
             >
-              <Project project={project} color={props.color} />
+              <Project project={project} color={colors[index]} />
             </div>
           );
         })}
+        <Dots
+          projects={projects}
+          currentSlide={currentSlide}
+          setCurrentSlide={setCurrentSlide}
+          colors={colors}
+          setColor={setColor}
+          color={color ? color : colors[0]}
+        />
       </div>
-      <Dots
-        projects={projects}
-        currentSlide={currentSlide}
-        setCurrentSlide={setCurrentSlide}
-        colors={props.colors}
-        setColor={props.setColor}
-        color={props.color}
-      />
     </div>
   );
 }

@@ -39,21 +39,4 @@
   width: 11px;
   height: 11px;
 }
-
-@media (max-width: 780px) {
-  .dots {
-    top: 95%;
-    right: 50%;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    width: 130px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-transform: translate(50%, 0);
-            transform: translate(50%, 0);
-  }
-}
 /*# sourceMappingURL=Dots.css.map */

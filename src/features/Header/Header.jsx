@@ -7,7 +7,7 @@ function Header(props) {
   return (
     <header>
       <HeaderTitle />
-      <HeaderLinks color={props.color}/>
+      <HeaderLinks />
     </header>
   );
 }

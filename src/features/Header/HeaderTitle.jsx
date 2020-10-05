@@ -2,7 +2,7 @@ import React from "react";
 
 function HeaderTitle(props) {
   return (
-    <div>
+    <div className="header-title-container">
       <h1>Tom Isherwood</h1>
       <h2>
         Full Stack Javascript Developer

@@ -78,7 +78,7 @@ function ProjectInfo(props) {
           ></div>
           </a>
           
-          <div>- Dummy receipt QR codes to scan through the application.</div>
+          <div>- Dummy receipt QR codes</div>
         </div>
       ) : null}
     </div>

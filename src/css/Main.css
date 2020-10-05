@@ -14,7 +14,6 @@
           flex-direction: column;
   width: 100vw;
   height: 100vh;
-  scroll-behavior: smooth;
   overflow-y: scroll;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
@@ -36,30 +35,15 @@
   scroll-snap-align: center;
 }
 
-@media (max-width: 780px) {
-  .carousel .slider {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    overflow-x: scroll;
-    -ms-scroll-snap-type: x mandatory;
-        scroll-snap-type: x mandatory;
-  }
+@media (max-width: 750px) {
   .carousel .slider .slide {
-    padding-top: 8.5rem;
-  }
-}
-
-@media (max-width: 510px) {
-  .carousel .slider .slide {
-    padding-top: 8rem;
+    padding-top: 7.5rem;
   }
 }
 
 @media (max-width: 430px) {
   .carousel .slider .slide {
-    padding-top: 7.5rem;
+    padding-top: 7rem;
   }
 }
 /*# sourceMappingURL=Main.css.map */
