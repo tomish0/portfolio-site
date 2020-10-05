@@ -50,13 +50,16 @@ function Main() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const handleEvent = () => {
+  const [hasMoved, setHasMoved] = useState(false);
+
+  const handleEvent = (e) => {
     var elem = document.querySelector(`#slide0`);
     var bounding = elem.getBoundingClientRect();
     var boundingTop = bounding.top + slideDist.slideHeight / 2;
     // var boundingLeft = bounding.left + slideDist.slideWidth / 2;
     if (
-      boundingTop > slideDist.slideHeight 
+      boundingTop > slideDist.slideHeight ||
+      bounding < slideDist.slideHeight
       // ||
       // boundingLeft > slideDist.slideHeight
     ) {
@@ -67,9 +70,8 @@ function Main() {
     var slides = slider.children.length;
     for (var i = 1; i < slides; i++) {
       if (
-        (boundingTop <= slideDist.slideHeight * i &&
-          boundingTop > slideDist.slideHeight * (i + 1)) 
-        //   ||
+        boundingTop <= slideDist.slideHeight * i &&
+        boundingTop > slideDist.slideHeight * (i + 1)
         // (boundingLeft <= slideDist.slideWidth * i &&
         //   boundingLeft > slideDist.slideWidth * (i + 1))
       ) {
@@ -80,7 +82,12 @@ function Main() {
   };
 
   return (
-    <div className="carousel" onWheel={handleEvent} onTouchMove={handleEvent}>
+    <div
+      className="carousel"
+      // onWheel={handleEvent}
+      // onTouchMove={handleEvent}
+      onScroll={handleEvent}
+    >
       <div className="slider">
         {projects.map((project, index) => {
           var color = Color(project.backgroundColor);
