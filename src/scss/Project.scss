@@ -116,15 +116,11 @@
 @media (max-width: 750px) {
   .project-container {
     flex-direction: column;
-    justify-content: space-evenly;
     .project-title {
       margin: 10px 0 10px 0;
-      .project-info-container {
-        margin-right: 0;
-      }
-      .window-link-container {
-        height: 50%;
-      }
+    }
+    .window-link-container {
+      height: 50%;
     }
   }
 }
@@ -137,6 +133,7 @@
 
 @media (max-width: 610px) {
   .project-container {
+    font-size: 0.7em;
     .window-link-container {
       height: 45%;
     }
@@ -145,9 +142,20 @@
 
 @media (max-width: 530px) {
   .project-container {
-    font-size: 0.7em;
     .window-link-container {
       height: 35%;
     }
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .project-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .project-container {
+    flex-direction: row;
   }
 }

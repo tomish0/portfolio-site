@@ -41,9 +41,15 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 610px) {
   .carousel .slider .slide {
     padding-top: 7rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .carousel .slider .slide {
+    padding-top: 6.5rem;
   }
 }
 /*# sourceMappingURL=Main.css.map */

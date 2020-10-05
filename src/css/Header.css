@@ -48,9 +48,10 @@ header .header-title-container h2 {
   }
 }
 
-@media (max-width: 617px) {
+@media (max-width: 610px) {
   header {
-    font-size: 13px;
+    font-size: 12.5px;
+    height: 7rem;
   }
 }
 
@@ -68,14 +69,14 @@ header .header-title-container h2 {
             flex-direction: column;
     text-align: center;
     padding: 1rem 0 0 0;
-    height: 7rem;
+    height: 6.5rem;
     font-size: 12px;
   }
-  header h1 {
-    margin: 0 0 10px 0;
+  header .header-title-container h1 {
+    margin: 0 0 5px 0;
   }
-  header h2 {
-    margin: 10px 0 0 0;
+  header .header-title-container h2 {
+    margin: 5px 0 0 0;
   }
 }
 /*# sourceMappingURL=Header.css.map */
