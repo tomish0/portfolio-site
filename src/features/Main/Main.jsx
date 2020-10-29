@@ -50,9 +50,7 @@ function Main() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const [hasMoved, setHasMoved] = useState(false);
-
-  const handleEvent = (e) => {
+  const handleEvent = () => {
     var elem = document.querySelector(`#slide0`);
     var bounding = elem.getBoundingClientRect();
     var boundingTop = bounding.top + slideDist.slideHeight / 2;
@@ -84,8 +82,6 @@ function Main() {
   return (
     <div
       className="carousel"
-      // onWheel={handleEvent}
-      // onTouchMove={handleEvent}
       onScroll={handleEvent}
     >
       <div className="slider">

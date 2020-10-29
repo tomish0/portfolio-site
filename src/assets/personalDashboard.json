@@ -1,8 +1,8 @@
   {
-    "link": "https://isengardcoding.com",
+    "link": "https://dashboard-app-tomish.netlify.app",
     "type": "Personal",
-    "title": "Personal Dashboard - Coding Exercise",
-    "description": "A coding challenge that utilises multiple different data assets.",
+    "title": "Personal Dashboard",
+    "description": "Responsive app that makes requests to multiple APIs and MongoDB.",
     "tech": {
       "backEnd": ["NodeJS", "Express", "MongoDB"],
       "frontEnd": ["ReactJS", "Redux", "SCSS"]
@@ -11,6 +11,7 @@
       "backEnd": "Please request access",
       "frontEnd": "https://github.com/tomish0/Personal-Dashboard-front"
     },
-    "note": "Manipulated the associated data sources to complete a coding challenge within the specified time period.",
-    "backgroundColor": "rgb(24, 60, 89)"
+    "note": "Includes login - create fake details.",
+    "backgroundColor": "rgb(24, 60, 89)",
+    "image": "https://api.tomish.me/images/dashboard.png"
   }

@@ -34,6 +34,23 @@
     "image": "https://api.tomish.me/images/rbuddie.jpeg"
   },
   {
+    "link": "https://dashboard-app-tomish.netlify.app",
+    "type": "Personal",
+    "title": "Personal Dashboard",
+    "description": "Responsive app that makes requests to multiple APIs and MongoDB.",
+    "tech": {
+      "backEnd": ["NodeJS", "Express", "MongoDB"],
+      "frontEnd": ["ReactJS", "Redux", "SCSS"]
+    },
+    "github": {
+      "backEnd": "Please request access",
+      "frontEnd": "https://github.com/tomish0/Personal-Dashboard-front"
+    },
+    "note": "Includes login - create fake details.",
+    "backgroundColor": "rgb(79, 161, 212)",
+    "image": "https://api.tomish.me/images/dashboard.png"
+  },
+  {
     "link": "https://cheese-ecommerce.netlify.app",
     "type": "Personal",
     "title": "Cheese Shop Ecommerce",
